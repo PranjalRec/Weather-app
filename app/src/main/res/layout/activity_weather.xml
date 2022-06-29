@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeatherActivity"
+    android:orientation="vertical"
+    android:background="#1E90FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <EditText
+            android:id="@+id/editTextCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_background"
+            android:hint="Enter city name"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:gravity="center"
+            android:layout_marginStart="25dp"
+            android:inputType="textPersonName"
+            android:drawableStart="@drawable/ic_location_city"/>
+
+        <Button
+            android:id="@+id/buttonSearch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_baseline_search_24"
+            android:layout_marginStart="7dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_weather"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewCityNameWeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="7dp"
+            android:text="city name"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp">
+
+            <ImageView
+                android:id="@+id/imageViewWeather"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@color/black"
+                android:layout_marginStart="25dp"
+                android:scaleType="fitXY"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewTempWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25 C"
+                    android:textSize="50sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/textViewWeatherConditionWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Few Clouds"
+                    android:textSize="30sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Humidity"
+                    android:textSize="24sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Max. Temp"
+                    android:textSize="24sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Min. Temp"
+                    android:textSize="24sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pressure"
+                    android:textSize="24sp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wind"
+                    android:textSize="24sp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/humidityWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=": 50%"
+                    android:textSize="24sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/maxTempWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=": 25 C"
+                    android:textSize="24sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/minTempWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=": 10 C"
+                    android:textSize="24sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/pressureWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=": 50"
+                    android:textSize="24sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/windWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=": 5"
+                    android:textSize="24sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="5dp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
